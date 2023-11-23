@@ -1,6 +1,29 @@
+import random
+
+
+# looks good
+# todo: use .txt file(s) to have random plaintexts
+# context manager, file mode: read
+# string concatenation with filename and random number
+
 def get_plaintext():
     plaintext = "aBc d".upper()
     return plaintext
+
+
+# Quite bloated, consider using comprehension instead:
+# substitution_cipher = {key: value for key, value in
+#                        zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+#                            "XNFRDBQSALICHJVKTPGMEWYOZU")}
+# todo: refactor this method to be neater
+# todo: replace "XNFRDBQSALICHJVKTPGMEWYOZU" with random substitution
+
+def random_alphabet():
+    alphabet = [chr(i) for i in range(65, 91)]
+    randomised = ""
+    while alphabet:
+        randomised += alphabet.pop(random.randint(0, len(alphabet) - 1))
+    return randomised
 
 
 def get_substitution_cipher():
@@ -34,6 +57,7 @@ def get_substitution_cipher():
     return substitution_cipher
 
 
+# looks good, instead of a list and appends, consider just using a string and +
 def encrypt(plaintext, substitution_cipher):
     ciphertext = []
     for letter in plaintext:
