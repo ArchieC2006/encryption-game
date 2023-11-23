@@ -30,5 +30,6 @@ def get_new_substitution_cipher(ciphertext, substitution_cipher):
 def result(new_substitution_cipher, user_input):
     if new_substitution_cipher == user_input[0]:
         st.text("you are correct")
+        # todo: improve message, also add balloons
     else:
         st.text("input what you think the substitution cipher is")

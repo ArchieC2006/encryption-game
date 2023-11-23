@@ -18,3 +18,5 @@ def user_input():
         pd.DataFrame([{chr(a): "-" for a in range(65, 91)}]))
     users_input = edited_chart.to_dict("records")
     return users_input
+
+# todo: add frequency analysis graph

@@ -1,0 +1,3 @@
+Lesson 5: markdown, use this to add a readme doc
+add a requirements.txt
+Get a perfect pylint score
