@@ -18,6 +18,10 @@ def get_new_plaintext(ciphertext, user_input):
 
 
 def result(new_plaintext, plaintext):
+    # todo: .upper()?
+    # todo: capitalise messages (as in "You are correct")
+    # todo: probably don't need the else, easier to just have the new
+    #       plaintext always shown
     if new_plaintext == plaintext:
         st.success("you are correct")
         st.success(f"the plaintext was \"{new_plaintext}\"")
