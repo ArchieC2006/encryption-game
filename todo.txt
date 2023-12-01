@@ -1,3 +1,5 @@
-Lesson 5: markdown, use this to add a readme doc
+Codecademy lesson 5: markdown, use this to add a readme.md doc
 add a requirements.txt
-Get a perfect pylint score
+Get a perfect flake8, then pylint score
+(ny) theming (https://docs.streamlit.io/library/advanced-features/theming)
+(ny) use forms and add in a scoring system

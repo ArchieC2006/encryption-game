@@ -14,11 +14,10 @@ def get_new_plaintext(ciphertext, user_input):
             new_plaintext += new_letter
         else:
             new_plaintext += letter
-    return new_plaintext
+    return new_plaintext  # todo: .upper()?
 
 
 def result(new_plaintext, plaintext):
-    # todo: .upper()?
     # todo: capitalise messages (as in "You are correct")
     # todo: probably don't need the else, easier to just have the new
     #       plaintext always shown
