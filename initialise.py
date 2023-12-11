@@ -1,17 +1,15 @@
 import random
+import json
 
 import streamlit as st
 
 
-# this is good, however we will likely need much longer plaintexts to be
-# able to use frequency analysis properly
-# todo: look into .json files as a way of having much longer plaintexts
 def get_plaintext():
-    with open("plaintext.txt", "r") as pt:
-        n = random.randint(0, 12)
-        for _ in range(1, n):
-            pt.readline()
-        return pt.readline().upper()
+    with open("plaintext.json", "r") as pt:
+        n = random.randint(0, 2)
+        text = json.load(pt)
+        plaintext = text[chr(65+n)]
+        return plaintext.upper()
 
 
 def random_alphabet():

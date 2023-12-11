@@ -3,10 +3,10 @@ import pandas as pd
 
 
 def output_ciphertext(ciphertext):
-    # warning probably isn't the best way to display this. Also we probably
-    # don't need to have the "cipher text is"
-    # todo: add in a st.expander with instructions and also use st.header(ciphertext)
-    st.warning(f"ciphertext is: \"{ciphertext}\"")
+    with st.expander("instructions"):
+        st.text("The aim of the game is to convert the ciphertext back into the plaintext by \nguessing the "
+                "substitution cipher and inputting it into the chart")
+    st.subheader(ciphertext)
 
 
 # todo: move dataframe to variable before data editor
