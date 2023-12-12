@@ -4,6 +4,9 @@ import json
 import streamlit as st
 
 
+# todo: change json format
+#  probably want something along the lines of {"plaintexts":[list of plaintexts]}
+#  this way you can use random directly on the list
 def get_plaintext():
     with open("plaintext.json", "r") as pt:
         n = random.randint(0, 2)
@@ -14,14 +17,15 @@ def get_plaintext():
 
 def random_alphabet():
     alphabet = [chr(i) for i in range(65, 91)]
-    # this is very good use of while and pop,
-    # however take a look at random.shuffle
+    # todo: use random.shuffle
+    #  this is very good use of while and pop,
+    #  however take a look at random.shuffle
     randomised = ""
     while alphabet:
         randomised += alphabet.pop(random.randint(0, len(alphabet) - 1))
     substitution_cipher = {key: value for key, value in
                            zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", randomised)}
-    st.text(substitution_cipher)
+    st.text(substitution_cipher)  # todo: remove this line
     return substitution_cipher
 
 

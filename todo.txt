@@ -1,5 +1,4 @@
 Codecademy lesson 5: markdown, use this to add a readme.md doc
-add a requirements.txt
 Get a perfect flake8, then pylint score
-(ny) theming (https://docs.streamlit.io/library/advanced-features/theming)
-(ny) use forms and add in a scoring system
+theming (https://docs.streamlit.io/library/advanced-features/theming)
+use forms and add in a scoring system (https://docs.streamlit.io/library/advanced-features/forms)

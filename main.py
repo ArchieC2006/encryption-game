@@ -1,12 +1,12 @@
 import streamlit as st
 
-
 import initialise
 import input
 import verify
 
-st.set_page_config("The Encryption Game")
-st.title("The encryption game")
+st.set_page_config("The Encryption Game",)  # todo: icon
+st.title("The encryption game")  # todo: capitalise
+
 if "plaintext" not in st.session_state:
     st.session_state.plaintext = initialise.get_plaintext()
 plaintext = st.session_state.plaintext
