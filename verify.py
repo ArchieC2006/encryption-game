@@ -16,4 +16,4 @@ def result(new_plaintext, plaintext):
     if new_plaintext == plaintext:
         st.success("You are correct")
         st.balloons()
-    st.warning(f"The new plaintext is {new_plaintext}") # todo: st.write
+    st.write(f"The new plaintext is {new_plaintext}")

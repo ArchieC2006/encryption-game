@@ -4,8 +4,8 @@ import initialise
 import input
 import verify
 
-st.set_page_config("The Encryption Game",)  # todo: icon
-st.title("The encryption game")  # todo: capitalise
+st.set_page_config("The Encryption Game","🔎")
+st.title("The Encryption Game")
 
 if "plaintext" not in st.session_state:
     st.session_state.plaintext = initialise.get_plaintext()
@@ -16,6 +16,7 @@ if "substitution_cipher" not in st.session_state:
 substitution_cipher = st.session_state.substitution_cipher
 ciphertext = initialise.encrypt(plaintext, substitution_cipher)
 
+input.plot_graph(ciphertext)
 input.output_ciphertext(ciphertext)
 user_input = input.user_input()
 print(user_input)
