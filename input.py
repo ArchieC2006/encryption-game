@@ -11,17 +11,21 @@ def output_ciphertext(ciphertext):
 
 
 def user_input():
-    chart = pd.DataFrame([{chr(a): "-" for a in range(65, 91)}], ["Substitution Cipher"])
+    chart = pd.DataFrame([{chr(a): "-" for a in range(65, 91)}],
+                         ["Substitution Cipher"])
     chart.index.names = ["Alphabet"]
     edited_chart = st.data_editor(chart)
     users_input = edited_chart.to_dict("records")
     return users_input[0]
 
 
+# todo: include an image/graph of the normal frequency of letters
+# todo: look at count()
 def plot_graph(ciphertext):
     counter = {chr(i): 0 for i in range(65, 91)}
     for i in ciphertext:
         if i in counter:
             counter[i] += 1
-    data = pd.DataFrame(list(counter[chr(i)] for i in range(65, 91)), [chr(i) for i in range(65, 91)])
+    data = pd.DataFrame(list(counter[chr(i)] for i in range(65, 91)),
+                        [chr(i) for i in range(65, 91)])
     st.bar_chart(data)

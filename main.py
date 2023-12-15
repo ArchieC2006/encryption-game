@@ -4,7 +4,7 @@ import initialise
 import input
 import verify
 
-st.set_page_config("The Encryption Game","🔎")
+st.set_page_config("The Encryption Game", "🔎")
 st.title("The Encryption Game")
 
 if "plaintext" not in st.session_state:
