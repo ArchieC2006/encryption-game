@@ -4,6 +4,11 @@ import initialise
 import input
 import verify
 
+# todo: Codecademy lesson 5: markdown, use this to add a readme.md doc
+# todo: theming (https://docs.streamlit.io/library/advanced-features/theming)
+# todo: use forms and add in a scoring system (https://docs.streamlit.io/library/advanced-features/forms)
+# todo: (ny) Get a perfect flake8, then pylint score
+
 st.set_page_config("The Encryption Game", "🔎")
 st.title("The Encryption Game")
 
