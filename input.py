@@ -22,10 +22,12 @@ def user_input():
 # todo: include an image/graph of the normal frequency of letters
 # todo: look at count()
 def plot_graph(ciphertext):
-    counter = {chr(i): 0 for i in range(65, 91)}
-    for i in ciphertext:
-        if i in counter:
-            counter[i] += 1
-    data = pd.DataFrame(list(counter[chr(i)] for i in range(65, 91)),
-                        [chr(i) for i in range(65, 91)])
-    st.bar_chart(data)
+    alphabet = zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    frequency = [8.2, 1.5, 2.8, 4.3, 12.7, 2.2, 2.0, 6.1, 7.0, 0.15, 0.77, 4.0, 2.4, 6.7, 7.5, 1.9, 0.095, 6.0, 6.3,
+                 9.1, 2.8, 0.98, 2.4, 0.15, 2.0, 0.074]
+    frequency_data = pd.DataFrame(frequency, alphabet)
+    st.bar_chart(frequency_data)
+    counter = {chr(i): ciphertext.count(chr(i)) for i in range(65, 91)}
+    counter_data = pd.DataFrame(list(counter[chr(i)] for i in range(65, 91)),
+                                [chr(i) for i in range(65, 91)])
+    st.bar_chart(counter_data)
