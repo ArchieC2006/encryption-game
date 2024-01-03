@@ -4,11 +4,14 @@ import initialise
 import input
 import verify
 
-# todo: Codecademy lesson 5: markdown, use this to add a readme.md doc
-# todo: theming (https://docs.streamlit.io/library/advanced-features/theming)
-# todo: use forms and add in a scoring system (https://docs.streamlit.io/library/advanced-features/forms)
-# todo: add typehints
-# todo: (ny) Get a perfect flake8, then pylint score
+# todo: 1. Constants file, think about mutability
+# todo: 2. Codecademy GitHub lesson 5: markdown, use this to add a readme.md doc and instructions
+# todo: 3. use forms and add in a scoring system (https://docs.streamlit.io/library/advanced-features/forms)
+# todo: 4. refactor main.py
+# todo: 5. go through all variables and rename unclear ones
+# todo: 6. add typehints
+# todo: 7. Get a perfect flake8, then pylint score
+# todo: 8. theming (https://docs.streamlit.io/library/advanced-features/theming)
 
 st.set_page_config("The Encryption Game", "🔎")
 st.title("The Encryption Game")
